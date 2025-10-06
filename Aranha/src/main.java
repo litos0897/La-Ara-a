@@ -60,7 +60,7 @@ public class main {
 
         if (decision3 == 1) {
             distancia += 2;
-            System.out.println("\n" + nombre + "La ventana se cierra delante de sus narice. Sigue encerrada en aquella clase y no le queda otra que meterse en el abrigo, el cual comenza a zarandear");
+            System.out.println("\n" + nombre + "La ventana se cierra delante de sus narices. Sigue encerrada en aquella clase y no le queda otra que meterse en el abrigo, el cual comenza a zarandear");
         }else {
             distancia += 1;
             System.out.println("\nDepués de un rato, " + nombre + " pensaba en salir del abrigo, pero justo en ese momento, empezó a moverse y a doblarse");
@@ -101,16 +101,16 @@ public class main {
         } else if (decision1 == 2) {
             distancia += 5;
             if (decision2 == 1) {
-                finalAventura = nombre + " pensaba en salir del abrigo";
+                finalAventura = nombre + " vuelve corriendo al abrigo y consigue escapar cuando el dueño sale del aula";
             }else {
-                finalAventura = nombre + " pensaba en salir del abrigo";
+                finalAventura = nombre + " piensa en volver al abrigo pero es pisada al momento";
             }
         }else if (decision3 == 1) {
             distancia += 6;
             if (decision4 == 2) {
-                finalAventura = nombre + " pensaba en salir del abrigo";
+                finalAventura = nombre + " corre hacia la ventana, pero la pisa alguien";
             }else {
-                finalAventura = nombre + " pensaba en salir del abrigo";
+                finalAventura = nombre + " consigue escapar cuando el dueño sale del aula";
             }
         }
 
