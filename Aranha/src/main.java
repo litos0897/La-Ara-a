@@ -67,7 +67,7 @@ public class main {
         }
 
         // Cuarta decisión
-        System.out.println("\nCuarta decisión: Harta de tanto bamboleo, " + nombre + "empieza a pensar en dejar el abrigo");
+        System.out.println("\nCuarta decisión: Harta de tanto bamboleo, " + nombre + " empieza a pensar en dejar el abrigo");
         System.out.println("1)" + nombre + " sigue su instinto y salta del abrigo");
         System.out.println("2)" + nombre + " no se atreve, estaría demasiado expuesta");
         System.out.print("Elige (1 o 2): ");
@@ -76,10 +76,10 @@ public class main {
 
         if (decision4 == 1) {
             distancia += 2;
-            System.out.println("\njusto al caer al suelo, una ola de personas se dirigen hacia " + nombre + "y presa del miedo, vuelve por donde ha venido, pero esta vez, la ventana estaba abierta");
+            System.out.println("\nJusto al caer al suelo, una ola de personas se dirigen hacia " + nombre + " y presa del miedo, vuelve por donde ha venido, pero esta vez, la ventana estaba abierta");
         }else {
             distancia += 1;
-            System.out.println("\nAl dejar de moverse aquel dichoso abrigo " + nombre + "decide asomarse para ver que ha cambiad y... no puede ser, ha vuelto al mismo sitio, pero esta vez la ventana abierta");
+            System.out.println("\nAl dejar de moverse aquel dichoso abrigo " + nombre + "decide asomarse para ver que ha cambiado y... no puede ser, ha vuelto al mismo sitio, pero esta vez la ventana abierta");
         }
 
         String finalAventura = "";
@@ -89,7 +89,7 @@ public class main {
             if (sobrevive) {
                 finalAventura = nombre + " se dirige despaborida hacia la ventana. Por fin, ha tenido su día de suerte, y consigue escapar";
             } else {
-                finalAventura = " Asomarse es lo peor que" + nombre + "podría haber hecho. Una gran mano humana la aplasta al instante.";
+                finalAventura =  nombre + " Corre hacia la ventana, pero justo antes de llegar, una mano humana la aplasta al instante.";
             }
         } else if (decision1 == 1) {
             distancia += 3;
