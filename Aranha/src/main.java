@@ -30,7 +30,7 @@ public class main {
             System.out.println("\n" + nombre + " tal y como descendió, vuelve al techo rápidamente, desde donde observa todo.");
         } else {
             distancia += 1;
-            sobrevive = false;
+            sobrevive = true;
             System.out.println("\n" + nombre + " desciende hasta el suelo, donde encuentra una migaja de pan.");
         }
 
@@ -47,6 +47,7 @@ public class main {
             System.out.println("\n" + nombre + " intenta huír por la ventana, pero está cerrada. Su única opción es un abrigo cercano.");
         } else {
             distancia += 2;
+            sobrevive = true;
             System.out.println("\n" + nombre + " corre hacia un abrigo de una mesa cercana. Parece haber despistado a los humanos.");
         }
 
@@ -63,6 +64,7 @@ public class main {
             System.out.println("\n" + nombre + "La ventana se cierra delante de sus narices. Sigue encerrada en aquella clase y no le queda otra que meterse en el abrigo, el cual comenza a zarandear");
         }else {
             distancia += 1;
+            sobrevive = true;
             System.out.println("\nDepués de un rato, " + nombre + " pensaba en salir del abrigo, pero justo en ese momento, empezó a moverse y a doblarse");
         }
 
@@ -79,7 +81,8 @@ public class main {
             System.out.println("\nJusto al caer al suelo, una ola de personas se dirigen hacia " + nombre + " y presa del miedo, vuelve por donde ha venido, pero esta vez, la ventana estaba abierta");
         }else {
             distancia += 1;
-            System.out.println("\nAl dejar de moverse aquel dichoso abrigo " + nombre + "decide asomarse para ver que ha cambiado y... no puede ser, ha vuelto al mismo sitio, pero esta vez la ventana abierta");
+            sobrevive = true;
+            System.out.println("\nAl dejar de moverse aquel dichoso abrigo " + nombre + " decide asomarse para ver que ha cambiado y... no puede ser, ha vuelto al mismo sitio, pero esta vez la ventana abierta");
         }
 
         String finalAventura = "";
@@ -91,26 +94,26 @@ public class main {
             } else {
                 finalAventura =  nombre + " Corre hacia la ventana, pero justo antes de llegar, una mano humana la aplasta al instante.";
             }
-        } else if (decision1 == 1) {
+        } else if (decision2 == 1) {
             distancia += 3;
-            if (decision2 == 2) {
-                finalAventura = nombre + " nota como aquel abrigo se mueve, y con el tambaleo, se cae al suelo. Solo puede ver humanos que la miran fijamente, además de algún grito de fondo, pero antes de darse cuenta, ya tiene un zapato encima.";
+            if (sobrevive) {
+                finalAventura = nombre + " nota como aquel abrigo se mueve, y con el tambaleo, se cae Por suerte, cae sobre hierba. Por fin era libre";
             } else {
-                finalAventura = nombre + " nota como aquel abrigo se mueve, y con el tambaleo, se cae. Por suerte, cae sobre hierba. Por fin era libre.";
+                finalAventura = nombre + " nota como aquel abrigo se mueve, y con el tambaleo, se cae al suelo. Solo puede ver humanos que la miran fijamente, además de algún grito de fondo, pero antes de darse cuenta, ya tiene un zapato encima";
             }
-        } else if (decision1 == 2) {
+        } else if (decision1 == 1) {
             distancia += 5;
-            if (decision2 == 1) {
-                finalAventura = nombre + " vuelve corriendo al abrigo y consigue escapar cuando el dueño sale del aula";
+            if (sobrevive) {
+                finalAventura = nombre + " no lo duda, huye al momento y sale por la venta";
             }else {
                 finalAventura = nombre + " piensa en volver al abrigo pero es pisada al momento";
             }
         }else if (decision3 == 1) {
             distancia += 6;
-            if (decision4 == 2) {
-                finalAventura = nombre + " corre hacia la ventana, pero la pisa alguien";
-            }else {
+            if (sobrevive) {
                 finalAventura = nombre + " consigue escapar cuando el dueño sale del aula";
+            }else {
+                finalAventura = nombre + " corre hacia la ventana, pero la pisa alguien";
             }
         }
 
