@@ -15,7 +15,7 @@ public class main {
         int decisionesTomadas = 0;
 
         System.out.println("\nÉste es el viaje de la araña " + nombre + ".");
-        System.out.println(nombre + " ha llegado al aula de DAM 1, sin saber los peligros que le esperan.\n");
+        System.out.println(nombre + " ha llegado al aula de DAM 1, sin saber los peligros que le esperan.\n     ");
 
         // Primera decisión
         System.out.println("Primera decisión: " + nombre + " desciende desde el techo con su hilo .");
@@ -51,30 +51,69 @@ public class main {
         }
 
         // Tercera decisión
-        System.out.println("\nParece que los humanos se han ido de ese sitio.");
+        System.out.println("\nTercera Decisión: Parece que los humanos se han ido de ese sitio.");
         System.out.println("1) Intenta de nuevo huir despaborida de aquel lugar por la ventana, ahora abierta.");
         System.out.println("2) No se fía, se queda en el abrigo.");
         System.out.print("Elige (1 o 2): ");
         int decision3 = sc.nextInt();
         decisionesTomadas++;
 
+        if (decision3 == 1) {
+            distancia += 2;
+            System.out.println("\n" + nombre + "La ventana se cierra delante de sus narice. Sigue encerrada en aquella clase y no le queda otra que meterse en el abrigo, el cual comenza a zarandear");
+        }else {
+            distancia += 1;
+            System.out.println("\nDepués de un rato, " + nombre + " pensaba en salir del abrigo, pero justo en ese momento, empezó a moverse y a doblarse");
+        }
+
+        // Cuarta decisión
+        System.out.println("\nCuarta decisión: Harta de tanto bamboleo, " + nombre + "empieza a pensar en dejar el abrigo");
+        System.out.println("1)" + nombre + " sigue su instinto y salta del abrigo");
+        System.out.println("2)" + nombre + " no se atreve, estaría demasiado expuesta");
+        System.out.print("Elige (1 o 2): ");
+        int decision4 = sc.nextInt();
+        decisionesTomadas++;
+
+        if (decision4 == 1) {
+            distancia += 2;
+            System.out.println("\njusto al caer al suelo, una ola de personas se dirigen hacia " + nombre + "y presa del miedo, vuelve por donde ha venido, pero esta vez, la ventana estaba abierta");
+        }else {
+            distancia += 1;
+            System.out.println("\nAl dejar de moverse aquel dichoso abrigo " + nombre + "decide asomarse para ver que ha cambiad y... no puede ser, ha vuelto al mismo sitio, pero esta vez la ventana abierta");
+        }
+
         String finalAventura = "";
 
-        if (decision3 == 1) {
+        if (decision4 == 1) {
             distancia += 1;
             if (sobrevive) {
-                finalAventura = nombre + " ha tenido su día de suerte, y por fin consigue escapar";
+                finalAventura = nombre + " se dirige despaborida hacia la ventana. Por fin, ha tenido su día de suerte, y consigue escapar";
             } else {
-                finalAventura = nombre + " se deja llevar por el pánico, y justo cuándo parecía que podía huir, la ventana se cerró, aplastándola al instante.";
+                finalAventura = " Asomarse es lo peor que" + nombre + "podría haber hecho. Una gran mano humana la aplasta al instante.";
             }
-        } else {
+        } else if (decision1 == 1) {
             distancia += 3;
-            if (decision1 == 1 && decision2 == 2) {
+            if (decision2 == 2) {
                 finalAventura = nombre + " nota como aquel abrigo se mueve, y con el tambaleo, se cae al suelo. Solo puede ver humanos que la miran fijamente, además de algún grito de fondo, pero antes de darse cuenta, ya tiene un zapato encima.";
             } else {
                 finalAventura = nombre + " nota como aquel abrigo se mueve, y con el tambaleo, se cae. Por suerte, cae sobre hierba. Por fin era libre.";
             }
+        } else if (decision1 == 2) {
+            distancia += 5;
+            if (decision2 == 1) {
+                finalAventura = nombre + " pensaba en salir del abrigo";
+            }else {
+                finalAventura = nombre + " pensaba en salir del abrigo";
+            }
+        }else if (decision3 == 1) {
+            distancia += 6;
+            if (decision4 == 2) {
+                finalAventura = nombre + " pensaba en salir del abrigo";
+            }else {
+                finalAventura = nombre + " pensaba en salir del abrigo";
+            }
         }
+
 
         // Final de la aventura
         System.out.println("\n===== FINAL DE LA AVENTURA =====");
